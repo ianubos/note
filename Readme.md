@@ -5,6 +5,7 @@
 [Git branches explanation](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
 ## Brad Traversy's Guide of Git & GitHub
+[youtube link](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
 commands
 ```
 git init
@@ -26,12 +27,24 @@ log.txt
 ```
 commands
 ```
-git branch mybranch
-git chechout mybranch    // Switch the branch
+git branch login
+git chechout login    // Switch the branch
 touch login.html
 git add .
 git commit -m "login form"
 git chechout master
+# The login.html file is gone, because you are in master branch, not in login branch!
+git merge login
+git remote add orign https://github.com/bradtraversy/myappsample.git
+git remote   // See the remote repos
+git push -u origin master
+touch README.md
+git add .
+git commit -m "Added readme"
+git push
+
+git pull  //up-to-date
+```
 
 
 
