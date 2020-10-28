@@ -1,1 +1,1 @@
-![GitHub Logo](/images/image.jpg)
+![setting of vscode](/images/image.png)
