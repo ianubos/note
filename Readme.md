@@ -63,6 +63,17 @@ git pull  //up-to-date
 That is because git's master branch has not been made yet until you firstly commit your repo.
 What you need to do is first commit! -> [stackoverflow's answer](https://stackoverflow.com/questions/9162271/fatal-not-a-valid-object-name-master/9162347)
 
+## Non-related repos' merge method
+```
+fatal: refusing to merge unrelated histories
+```
+That would be happened when you try to merge unrelated repositories.
+Use the option --allow-unrelated repositories.
+```
+git pull origin master --allow-unrelated-histories
+```
+
+[Solution url](https://www.educative.io/edpresso/the-fatal-refusing-to-merge-unrelated-histories-git-error)
 
 
 
