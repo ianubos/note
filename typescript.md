@@ -25,4 +25,4 @@ Angular built in functions, see [official document](https://angular.io/guide/pip
 ```
 
 ## Data passes to another component
-!(data pass method)[./images/data-pass-method.jpeg]
+!(data pass method)[/images/data-pass-method.jpg]
