@@ -29,5 +29,7 @@ Angular built in functions, see [official document](https://angular.io/guide/pip
 ## Data passes to another component
 ![data pass method](/images/data-pass-method.jpg)
 
-## Injector
+## Injector of Service
 ![injector](https://angular.io/generated/images/guide/architecture/injector-injects.png)
+
+![Injectable root and trees](https://2.bp.blogspot.com/-RJ8x9Ac5S8w/WEPqbAkwZxI/AAAAAAAAAN8/UibJElrG5n4QoihWnWRmRDPkgIFDIw5EwCK4B/s640/DependencyInjection1.png)
