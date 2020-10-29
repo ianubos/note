@@ -10,6 +10,8 @@ It is like blueprint.
 
 
 # Angular Notes
+## Angular Concepts
+[Official document](https://angular.io/guide/architecture) is great to read. But [the old type of this document](https://v2.angular.io/docs/ts/latest/guide/architecture.html) seems better to read
 
 ## pipes
 Angular built in functions, see [official document](https://angular.io/guide/pipes)
@@ -26,3 +28,6 @@ Angular built in functions, see [official document](https://angular.io/guide/pip
 
 ## Data passes to another component
 ![data pass method](/images/data-pass-method.jpg)
+
+## Injector
+![injector](https://angular.io/generated/images/guide/architecture/injector-injects.png)
