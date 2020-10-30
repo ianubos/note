@@ -33,3 +33,16 @@ Angular built in functions, see [official document](https://angular.io/guide/pip
 ![injector](https://angular.io/generated/images/guide/architecture/injector-injects.png)
 
 ![Injectable root and trees](https://2.bp.blogspot.com/-RJ8x9Ac5S8w/WEPqbAkwZxI/AAAAAAAAAN8/UibJElrG5n4QoihWnWRmRDPkgIFDIw5EwCK4B/s640/DependencyInjection1.png)
+
+## Routing method
+app-routing.modelu.ts defines what to show at <router-outlet></router-outlet>
+```ts
+const routes: Routes = [
+  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
+  { path: 'heroes', component: HeroesComponent },
+  { path: "dashboard", component: DashboardComponent },
+  { path: "detail/:id", component: HeroDetailComponent }
+];
+```
+
+
