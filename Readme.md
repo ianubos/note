@@ -44,6 +44,9 @@ git commit -m "Added readme"
 git push
 
 git pull  //up-to-date
+
+
+git branch -d <branch name> //delete a branch
 ```
 
 
