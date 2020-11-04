@@ -60,7 +60,6 @@ git branch -d <branch name> //delete a branch
 1. vscode menu -> Preference -> Setting
 2. Search "files.exclude" which decides what types of files do not show.
 3. Delete /.git
-![setting of vscode](/images/image.png)
 
 ## Cannot make by "git branch login"
 That is because git's master branch has not been made yet until you firstly commit your repo.
