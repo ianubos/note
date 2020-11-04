@@ -52,3 +52,13 @@ Url: http://restapi.localhost/wp-json/wp/v2/books/9   //By id
 Url: http://restapi.localhost/wp-json/wp/v2/books?per_page=1   //Just one book
 -> same to set Params per_page: 1
 ```
+
+
+## Set up React
+Create React folder
+```
+npx create-react-app frontend
+cd frontend
+npm i axios react-router-dom
+npm start
+```
