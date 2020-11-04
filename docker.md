@@ -108,3 +108,32 @@ services:
       - '27017:27017'   # MongoDB uses this port
 
 ```
+
+docker commands
+```
+docker-compose up -d  // detouched mode
+docker-compose down   // close the containers running
+```
+
+Create ssh key for digitalocean service
+```
+cat ~/.ssh/id_rsa_<name>.pub
+# id_rsa_do.pub is digitalocean as a public key
+
+ssh-add ~/.ssh/id_rsa_do
+ssh root@142.93.202.135
+
+# you can access digitalocean, and in the root...
+
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub
+
+# Give the ssh key to the Github -> setting -> New ssh key
+
+$ git clone <link>
+
+# Go to the folder
+
+$ docker-compose up -d
+
+```
