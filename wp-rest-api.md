@@ -8,6 +8,7 @@ By [Travesy Media](https://www.youtube.com/watch?v=fFNXWinbgro)
 ### Plugins
 * JWT Authentication for WP-API
 * Custom Post Type UI
+* Advanced Custom Fields
 
 ## GET & POST with Postman
 Get method
@@ -39,4 +40,14 @@ Body(raw):
     "username": "<your wordpress username>",
     "password": "<your wordpress password>"
 }
+```
+## Get Custom Post
+ex) Custom post type named Books
+```
+Method: Get
+Content-Type: application/json
+Url: http://restapi.localhost/wp-json/wp/v2/books  // Entire Books Object
+Url: http://restapi.localhost/wp-json/wp/v2/books/9   //By id
+Url: http://restapi.localhost/wp-json/wp/v2/books?per_page=1   //Just one book
+-> same to set Params per_page: 1
 ```
