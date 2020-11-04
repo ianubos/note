@@ -70,5 +70,41 @@ docker push btravesy/nginx-website // Push the image to Docker Hub like Github!
 
 ```
 
+# Dokcer practice with Node&MongoDB
+By [Travesy Media](https://www.youtube.com/watch?v=hP77Rua1E0c&t=5s)
 
+DockerFile
+```
+FROM node:10
 
+WORKDIR /usr/src/app
+
+COPY package*.json ./    # package.json and package-lock.json
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000     # app uses this port
+
+CMD ["npm", "start"]     # Run command to start server
+```
+docker-compose.yml
+```docker
+version: '3'
+services:
+  app:
+    container_name: docker-node-mongo
+    restart: always
+    build: .
+    ports:
+      - '80:3000'       #app uses 3000 port
+    external_links:
+      - mongo           # chain the mongo and app container
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'   # MongoDB uses this port
+
+```
