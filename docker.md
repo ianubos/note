@@ -29,5 +29,46 @@ docker container run -d -p 8081:80 myapache httpd
 docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
 
 docker container stop <container name> // Stop container running
+docker container rm myapache // Running container cannot be removed.
+docker container rm myapache -f // -f flag is force to do
+
+docker container exec -it mynginx bash // Interactive mode into container inside
+#cd usr/share/nginx/html  // There is a html file showing up in the localhost.
+#exit
+
+docker rm $(docker ps -aq) -f  // Remove all the container at all
+
+docker container run -d -p 8080:80 -v C:/(pwd):/usr/share/nginx/html --name nginx-website nginx
+// -v mount html folder with local folder where you are
+```
+
+Inside the test directory...
+TEST
+|-about.html
+|-index.html
+|-Dockerfile
+
+DockerFile
+```
+FROM nginx:latest
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+```
+
+docker commands
+```
+docker image build -t <image name you create>  // Make image this time "btraversy/nginix-website"
+// -t -> name image
+docker rm nginx-website -f
+
+docker container run -d -p 8082:80 btravesy/nginx-website
+// localhost:8082 shows index.html!
+
+docker push btravesy/nginx-website // Push the image to Docker Hub like Github!
 
 ```
+
+
+
