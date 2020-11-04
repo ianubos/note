@@ -115,7 +115,7 @@ docker-compose up -d  // detouched mode
 docker-compose down   // close the containers running
 ```
 
-Create ssh key for digitalocean service
+### Usage of Digitalocean service
 ```
 cat ~/.ssh/id_rsa_<name>.pub
 # id_rsa_do.pub is digitalocean as a public key
