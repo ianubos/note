@@ -9,6 +9,7 @@ By [Travesy Media](https://www.youtube.com/watch?v=fFNXWinbgro)
 * JWT Authentication for WP-API
 * Custom Post Type UI
 * Advanced Custom Fields
+* ACF to REST API   // Expose custom fields to REST API
 
 ## GET & POST with Postman
 Get method
