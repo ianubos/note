@@ -1,11 +1,13 @@
+
+
+
+### Get image from folder
 ```php
-
-
-// Get image from folder
 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pics/_DSC3831.jpg" alt="">
+```
 
-
-// Get custom taxonomy's terms
+### Get custom taxonomy's terms
+```php
 <?php
 $terms = get_terms( 'collection_taxonomy', array(
     'orderby'    => 'count',
@@ -23,8 +25,10 @@ foreach ($terms as $term) :
 <?php
 endforeach;
 ?>
+```
 
-// When access to like {url}/information, use home_url
+### When access to like {url}/information, use home_url
+```php
 <a class="topics-category" href="<?php echo home_url("information") ?>">すべて</a>
 
 
@@ -44,9 +48,10 @@ foreach($cats as $cat) {
 <?php
 }
 ?>
+```
 
-
-//Pagination link ><
+### Pagination link ><
+```php
 <div class="wp-pagination">
 <?php
 
@@ -61,8 +66,10 @@ echo paginate_links( array(
 
 ?>
 </div>
+```
 
-// Get Default posts
+### Get Default posts
+```php
 <div class="topics-cards">
         
 <?php
