@@ -24,4 +24,66 @@ foreach ($terms as $term) :
 endforeach;
 ?>
 
+// When access to like {url}/information, use home_url
+<a class="topics-category" href="<?php echo home_url("information") ?>">すべて</a>
+
+
+//Get category
+<?php
+$cats = get_categories(
+    array(
+        'orderby' => 'menu_order',
+        'hide_empty' => 0,
+    )
+);
+foreach($cats as $cat) {
+?>
+        <a class="topics-category" href="<?php echo get_category_link( $cat->term_id ) ?>">
+            <?php echo $cat->name; ?>
+        </a>
+<?php
+}
+?>
+
+
+//Pagination link ><
+<div class="wp-pagination">
+<?php
+
+echo paginate_links( array(
+    'base' => str_replace( 9999, '%#%', esc_url( get_pagenum_link( 9999 ) ) ),
+    'format' => '?paged=%#%',
+    'current' => max( 1, get_query_var('paged') ),
+    'total' => $the_topics_query->max_num_pages,
+    'prev_text' => '<',
+    'next_text' => '>',
+) );
+
+?>
+</div>
+
+// Get Default posts
+<div class="topics-cards">
+        
+<?php
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$the_topics_query = new WP_Query( 
+    array(
+        "post_type" => "post",
+        "paged" => $paged,
+));
+ 
+if ( $the_topics_query->have_posts() ) {
+    while ( $the_topics_query->have_posts() ) {
+        $the_topics_query->the_post();
+        get_template_part( 'template-parts/topics-card');
+    }
+} else {
+    echo "投稿が見つかりません";
+}
+
+?>
+
+</div>
+
 ```
