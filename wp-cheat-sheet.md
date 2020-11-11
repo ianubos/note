@@ -32,7 +32,7 @@ endforeach;
 <a class="topics-category" href="<?php echo home_url("information") ?>">すべて</a>
 ```
 
-Get category
+### Get category
 ```php
 <?php
 $cats = get_categories(
