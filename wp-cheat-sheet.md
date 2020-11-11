@@ -30,9 +30,10 @@ endforeach;
 ### When access to like {url}/information, use home_url
 ```php
 <a class="topics-category" href="<?php echo home_url("information") ?>">すべて</a>
+```
 
-
-//Get category
+Get category
+```php
 <?php
 $cats = get_categories(
     array(
