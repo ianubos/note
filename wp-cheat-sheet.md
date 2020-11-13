@@ -95,3 +95,18 @@ if ( $the_topics_query->have_posts() ) {
 </div>
 
 ```
+### Pass args to get_template_part
+```php
+get_template_part(
+    'template-part',
+    'name',
+    array(
+        'key'   => 'value',
+        'key2'  => 'value2'
+    )
+);
+
+// Use like below
+echo $args['key'];  // Specific values
+```
+
