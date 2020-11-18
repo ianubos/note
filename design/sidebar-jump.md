@@ -44,6 +44,27 @@ function scrollToTag(tag) {
         }
     });
 }
+
+// information sidebar
+const informationSidebar = document.querySelector<HTMLElement>(
+    ".information-sidebar"
+);
+const footer = document.querySelector<HTMLElement>("footer");
+if (document.querySelector(".information-main")) {
+    window.addEventListener(
+        "scroll",
+        () => {
+            const isNearFooter =
+                footer.offsetTop - (window.scrollY + window.innerHeight) < 100;
+            if (isNearFooter) {
+                informationSidebar.classList.add("sidebar-hide");
+            } else {
+                informationSidebar.classList.remove("sidebar-hide");
+            }
+        },
+        { passive: true }
+    );
+}
 ```
 
 php file
