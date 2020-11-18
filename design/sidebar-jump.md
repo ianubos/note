@@ -133,3 +133,109 @@ endforeach;
 get_footer();
 ?>
  ```
+ css file
+ ```css
+ 
+.information-main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    .information-content {
+        margin-right: 10%;
+        flex: 0 1 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        .information-card {
+            padding: 4% 0;
+            font-family: "Yu Gothic";
+            .title {
+                font-size: 24px;
+                margin-top: 15px;
+            }
+            .date {
+                font-size: 14px;
+                color: #555;
+                margin: 0px auto 10px 15px;
+            }
+            .image {
+                margin: 15px 0;
+                width: 100%;
+                height: auto;
+            }
+            .description {
+                font-size: 16px;
+                padding: 0 2%;
+            }
+        }
+
+    }
+
+    .wp-pagination {
+        margin: 10% 10% 10% 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .page-numbers {
+            color: #555;
+            border-bottom: solid 1px transparent;
+            font-size: 18px;
+            margin: 0 20px 10px 20px;
+            &:hover {
+                color: $accent-color;
+                border-bottom: solid 1px $accent-color;
+            }
+        }
+        .current {
+            color: #ccc;
+            &:hover {
+                color: #ccc;
+                border-bottom: solid 1px transparent;
+            }
+        }
+    }
+}
+
+.sidebar-hide {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.information-sidebar {
+    transition: all .2s;
+    visibility: visible;
+    opacity: 1;
+
+    position: fixed;
+    top: 25%;
+    left: 15%;
+    width: 25%;
+    .sidebar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Times New Roman',"Yu Mincho", Times, serif;
+        font-size: 15px;
+        letter-spacing: 1px;
+        .title {
+            border-bottom: solid 1px #555;
+        }
+        .information-sidebar-content {
+            transition: all .2s;
+            margin: 20px 7px;
+            color: #000;
+            &:hover {
+                cursor: pointer;
+                color: #888;
+            }
+        }
+    }
+}
+
+.sidebar-toggle {
+    color: $accent-color !important;
+}
+```
