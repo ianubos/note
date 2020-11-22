@@ -90,6 +90,13 @@ del .git/index
 git reset
 ```
 
+## Git clone with changed name folder
+```
+git clone {url} {name}
+```
+
+
+
 
 
 
