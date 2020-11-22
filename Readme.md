@@ -77,6 +77,20 @@ git pull origin master --allow-unrelated-histories
 
 [Solution url](https://www.educative.io/edpresso/the-fatal-refusing-to-merge-unrelated-histories-git-error)
 
+## Branch error
+Error message like this.
+```
+git checkout {branch name}
+
+// return "fatal: unknown index entry format 0x18610000"
+```
+It was due to ./git/index file was broken. So delete and reset this file.
+```
+del .git/index
+git reset
+```
+
+
 
 
 
