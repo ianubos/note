@@ -135,3 +135,26 @@ php_value memory_limit 2G
 php_value max_execution_time 600
 php_value max_input_time 600
 ```
+
+### The requested URL /about was not found on this server.
+Error message, there is not such url on this server...
+```
+Not Found
+
+The requested URL /about was not found on this server.
+
+Apache/2 Server at www.wildlionmedia.co.uk Port 80
+```
+When this error message appears, add these lines in .htaccess file.
+```
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+```
