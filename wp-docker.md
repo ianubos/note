@@ -1,4 +1,5 @@
 ### docker image, use it with the aiz template docker image!
+Wordpress docker image
 ```docker
 version: '3.6'
 services:
@@ -47,14 +48,90 @@ services:
             - ./wordpress/wp-content/themes/kisimo_v3/assets/webpack/dist:/webpack/dist
 volumes:
     db-data:
-    wp-admin:
-        driver: local
-    wp-includes:
-        driver: local
 
 networks:
     front_bridge:
         external: true
     back_bridge:
         driver: bridge
+```
+nginx docker image
+```
+version: '3.6'
+
+services:
+    nginx-proxy:
+        container_name: nginx_proxy
+        image: jwilder/nginx-proxy
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - html:/usr/share/nginx/html
+            - dhparam:/etc/nginx/dhparam
+            - vhost:/etc/nginx/vhost.d
+            - certs:/etc/nginx/certs:ro
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+        labels:
+            - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+        restart: always
+        environment:
+            TZ: Asia/Tokyo
+        networks:
+            - front_bridge
+    # letsencrypt-nginx-proxy-companion:
+    #     image: jrcs/letsencrypt-nginx-proxy-companion
+    #     container_name: nginx-proxy-lets-encrypt
+    #     restart: always
+    #     depends_on:
+    #         - "nginx-proxy"
+    #     volumes:
+    #         - certs:/etc/nginx/certs:rw
+    #         - vhost:/etc/nginx/vhost.d
+    #         - html:/usr/share/nginx/html
+    #         - /var/run/docker.sock:/var/run/docker.sock:ro
+    #     environment:
+    #         NGINX_PROXY_CONTAINER: nginx-proxy
+    #     networks:
+    #         - front_bridge
+
+volumes:
+    certs:
+    html:
+    vhost:
+    dhparam:
+
+networks:
+    front_bridge:
+        external: true
+
+```
+
+# Problems
+
+### Fail to import All-in-One WP Migration
+Error "413 request entity too large"
+It was caused by nginx upload limit or wordpress upload limit.
+1. nginx
+```
+docker exec -it {container id} bash
+apt-get update
+apt-get install vim
+vi ../etc/nginx/nginx.conf
+```
+Then add this line to html section,
+```
+http {
+...
+    client_max_body_size 512M;
+}
+```
+2. wordpress
+Add these lines to .htaccess file
+```
+php_value upload_max_filesize 2G
+php_value post_max_size 2G
+php_value memory_limit 2G
+php_value max_execution_time 600
+php_value max_input_time 600
 ```
