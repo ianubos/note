@@ -1,0 +1,208 @@
+<style> <!-- scss -->
+//hamberger action
+$ham_height: 22px;
+$line_height: 1px;
+$total_height: 23px;
+$ham_width: $ham_height * 1.5;
+
+.nav-icon {
+    visibility: hidden;
+    height: $ham_height + $line_height;
+    width: $ham_width; 
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: rotate(0deg) translateY(-50%);
+    cursor: pointer;
+    span {
+        display: block;
+        position: absolute;
+        height: $line_height;
+        width: 100%;
+        background: #000;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+    }
+}
+#nav-icon {
+    span {
+        &:nth-child(1) {
+            top: 0px;
+            transform-origin: center center;
+        }
+        &:nth-child(2) {
+            top: $ham_height / 2;
+            opacity: 1;
+            width: 100%;
+        }
+        &:nth-child(3) {
+            top: $ham_height;
+            transform-origin: center center;
+        }
+    }
+    &.open {
+        visibility: visible;
+        span {
+            &:nth-child(1) {
+                animation: hamberger-topbar .5s forwards;
+            }
+            &:nth-child(2) {
+                width: 0%;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                animation: hamberger-bottombar .5s forwards;
+            }
+        }
+    }
+}
+#nav-icon-opened {
+    span {
+        &:nth-child(1) {
+            top: $ham_height / 2;
+            transform-origin: center center;
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            top: $ham_height / 2;
+            opacity: 0;
+            width: 0%;
+            transition-delay: .25s;
+        }
+        &:nth-child(3) {
+            top: $ham_height / 2;
+            transform-origin: center center;
+            transform: rotate(-45deg);
+        }
+    }
+    &.close {
+        visibility: visible;
+        span {
+            &:nth-child(1) {
+                animation: hamberger-topbar-reverse .5s forwards;
+            }
+            &:nth-child(2) {
+                width: 100%;
+                opacity: 1;
+            }
+            &:nth-child(3) {
+                animation: hamberger-bottombar-reverse .5s forwards;
+            }
+        }
+    }
+}
+
+@keyframes hamberger-topbar {
+    0% {
+        top: 0px;
+    }
+    40% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    60% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    100% {
+        top: $ham_height / 2;
+        transform: rotate(45deg);
+    }
+}
+@keyframes hamberger-bottombar {
+    0% {
+        top: $ham_height;
+    }
+    40% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    60% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    100% {
+        top: $ham_height / 2;
+        transform: rotate(-45deg);
+    }
+}
+@keyframes hamberger-topbar-reverse {
+    0% {
+        top: $ham_height / 2;
+        transform: rotate(45deg);
+    }
+    40% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    60% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    100% {
+        top: 0px;
+        transform: rotate(0);
+    }
+}
+@keyframes hamberger-bottombar-reverse {
+    0% {
+        top: $ham_height / 2;
+        transform: rotate(-45deg);
+    }
+    40% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    60% {
+        top: $ham_height / 2;
+        transform: rotate(0);
+    }
+    100% {
+        top: $ham_height;
+        transform: rotate(0);
+    }
+}
+</style>
+
+<!-- html -->
+<div id="nav-icon" class="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div id="nav-icon-opened" class="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- script -->
+<script>
+//hamburger action
+const navIcon = document.getElementById("nav-icon");
+const navIconOpened = document.getElementById("nav-icon-opened");
+navIcon.addEventListener("click", openNavIcon);
+navIconOpened.addEventListener("click", closeNavIcon);
+let isOpened = true;
+toggleNavIcon(isOpened);
+function openNavIcon() {
+    console.log("open nav clicked");
+    isOpened = [...navIcon.classList].includes("open");
+    toggleNavIcon(isOpened);
+}
+function closeNavIcon() {
+    console.log("close nav clicked");
+    isOpened = [...navIcon.classList].includes("open");
+    toggleNavIcon(isOpened);
+}
+function toggleNavIcon(isOpened) {
+    if (isOpened) {
+        navIcon.classList.remove("open");
+        navIconOpened.classList.add("close");
+    } else {
+        navIconOpened.classList.remove("close");
+        navIcon.classList.add("open");
+    }
+}
+</script>
