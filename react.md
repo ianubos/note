@@ -48,7 +48,7 @@ export class ThemeProvider extends Component {
 }
 ```
 App.js
-```
+```jsx
 import {ThemeProvider} from "./contexts/ThemeContext";
 class App extends Component {
   render() {
@@ -61,7 +61,7 @@ class App extends Component {
 }
 ```
 And somewhere inside the ThemeContext
-```
+```jsx
 import { ThemeContext } from "./contexts/ThemeContext";
 
 class Navbar extends Component {
