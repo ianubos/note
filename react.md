@@ -22,3 +22,52 @@ function Example() {
   );
 }
 ```
+
+### Context
+Context is a method passing down variables.
+It uses central place to preserve variables like Redux.
+
+ThemeContext.js
+```jsx
+import React, { createContext, Component } from "react";
+
+export const ThemeContext = createContext();
+
+export class ThemeProvider extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { isDarkMode: true };
+    }
+    render() {
+        return (
+        <ThemeContext.Provider value={{ ...this.state, tastesLikeChicken: true }}>
+            {this.props.children}
+        </ThemeContext.Provider> 
+        )
+    }
+}
+```
+App.js
+```
+import {ThemeProvider} from "./contexts/ThemeContext";
+class App extends Component {
+  render() {
+    return (
+      <ThemeProvider>
+        ...
+      </ThemeProvider>
+    );
+  }
+}
+```
+And somewhere inside the ThemeContext
+```
+import { ThemeContext } from "./contexts/ThemeContext";
+
+class Navbar extends Component {
+  static contextType = ThemeContext;
+  render() {
+    console.log(this.context)
+```
+
+
