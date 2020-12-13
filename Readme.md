@@ -47,8 +47,10 @@ git pull  //up-to-date
 
 git branch -d <branch name> //delete a branch
 
+//It lists the shortnames of each remote handle you’ve specified
 git remote -v //See the connected repo
-git remote add {repo_name} {url} //Change the connected repo
+
+git remote add {shortName} {url} //Change the connected repo
 ```
 
 
