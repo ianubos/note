@@ -32,10 +32,10 @@ git chechout login    // Switch the branch
 touch login.html
 git add .
 git commit -m "login form"
-git chechout master
+git checkout master
 # The login.html file is gone, because you are in master branch, not in login branch!
 git merge login
-git remote add orign https://github.com/bradtraversy/myappsample.git
+git remote add origin https://github.com/bradtraversy/myappsample.git
 git remote   // See the remote repos
 git push -u origin master
 touch README.md
@@ -45,8 +45,10 @@ git push
 
 git pull  //up-to-date
 
-
 git branch -d <branch name> //delete a branch
+
+git remote -v //See the connected repo
+git remote add {repo_name} {url} //Change the connected repo
 ```
 
 
