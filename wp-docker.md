@@ -110,6 +110,7 @@ networks:
 # Problems
 
 ### Fail to import All-in-One WP Migration
+![alt text](./images/wordpress_all_in_one_mig_failed.png)
 Error "413 request entity too large"
 It was caused by nginx upload limit or wordpress upload limit.
 1. nginx
