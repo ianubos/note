@@ -124,6 +124,7 @@ Then add this line to html section,
 ```
 http {
 ...
+    keepalive_timeout 65;
     client_max_body_size 512M;
 }
 ```
