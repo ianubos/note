@@ -4,6 +4,7 @@
 [Markdown language cheetsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 [Git branches explanation](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 [Writing on Github](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github)
+[Keys to a well witten readme](https://medium.com/chingu/keys-to-a-well-written-readme-55c53d34fe6d)
 
 ## Brad Traversy's Guide of Git & GitHub
 [youtube link](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
