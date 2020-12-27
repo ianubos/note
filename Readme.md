@@ -52,6 +52,12 @@ git branch -d <branch name> //delete a branch
 git remote -v //See the connected repo
 
 git remote add {shortName} {url} //Change the connected repo
+
+git push --mirror https://github.com/exampleuser/new-repository.git  // Duplicate
+git remote set-url --push origin https://github.com/exampleuser/mirrored  // Change remote repository
+// Update mirror
+git fetch -p origin
+git push --mirror
 ```
 
 
