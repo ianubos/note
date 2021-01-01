@@ -110,6 +110,7 @@ networks:
 # Problems
 
 ### Fail to import All-in-One WP Migration
+[A solution](https://shameem.me/increase-upload-limit-for-all-in-one-wp-migration-plugin/#:~:text=You%20can%20export%20and%20download,import%20maximum%20512%20MB%20backups.)
 ![alt text](./images/wordpress_all_in_one_mig_failed.png)
 Error "413 request entity too large"
 It was caused by nginx upload limit or wordpress upload limit.
