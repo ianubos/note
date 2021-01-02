@@ -59,6 +59,9 @@ git remote set-url --push origin https://github.com/exampleuser/mirrored  // Cha
 // Update mirror
 git fetch -p origin
 git push --mirror
+
+//git remote
+git remote rm {name} //delete remote url
 ```
 
 
