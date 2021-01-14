@@ -53,6 +53,7 @@ git branch -d <branch name> //delete a branch
 git remote -v //See the connected repo
 
 git remote add {shortName} {url} //Change the connected repo
+git remote add origin git@github.com:sammy/my-new-project.git // origin is the default name git gives to a remote server
 
 git push --mirror https://github.com/exampleuser/new-repository.git  // Duplicate
 git remote set-url --push origin https://github.com/exampleuser/mirrored  // Change remote repository
@@ -62,6 +63,8 @@ git push --mirror
 
 //git remote
 git remote rm {name} //delete remote url
+
+git push --all origin // all the branches at the same time to push
 ```
 
 
