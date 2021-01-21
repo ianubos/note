@@ -65,6 +65,10 @@ git push --mirror
 git remote rm {name} //delete remote url
 
 git push --all origin // all the branches at the same time to push
+
+//git branch
+git checkout -t origin/test  //get remote branch origin/test if there is no test branch on local machine.
+
 ```
 
 
