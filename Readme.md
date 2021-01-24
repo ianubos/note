@@ -67,6 +67,7 @@ git remote rm {name} //delete remote url
 git push --all origin // all the branches at the same time to push
 
 //git branch
+git fetch --all //try this before git checkout --track origin/{branchname}
 git checkout -t origin/test  //get remote branch origin/test if there is no test branch on local machine.
 git reset --hard  //discard local changes
 git checkout {filename}  //discard specific local changes
