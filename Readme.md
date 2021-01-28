@@ -72,6 +72,8 @@ git checkout -t origin/test  //get remote branch origin/test if there is no test
 git reset --hard  //discard local changes
 git checkout {filename}  //discard specific local changes
 
+git reset {filename} //remove file from staging area
+git checkout -- {filename} // do not commit which is not on the staging area
 ```
 
 
