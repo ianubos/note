@@ -74,6 +74,10 @@ git checkout {filename}  //discard specific local changes
 
 git reset {filename} //remove file from staging area
 git checkout -- {filename} // do not commit which is not on the staging area
+
+// discard unstaged file changes
+git stash save --keep-index --include-untracked
+git stash drop
 ```
 
 
