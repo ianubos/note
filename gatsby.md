@@ -3,6 +3,8 @@
  - sass
  - [source-filesysmtem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/?=gatsby-source-)
  - transformer-remark
+ - [cross-env](https://www.gatsbyjs.com/docs/using-graphql-playground/)
+    how to use graphql
  
 
 ## errors
