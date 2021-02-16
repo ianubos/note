@@ -1,4 +1,7 @@
 
+## resources
+ - [gatsby-node.js](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/)
+
 ## dependencies
  - sass
  - [source-filesysmtem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/?=gatsby-source-)
