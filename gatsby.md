@@ -13,6 +13,7 @@
 
 ## errors
  - error ```eperm operation not permitted```  
+   please try to change folder -> property -> security -> full control
    [see this answer on stackoverflow](https://stackoverflow.com/questions/34600932/npm-eperm-operation-not-permitted-on-windows)  
    delete node_modules folder and reinstall by `npm install`  
    npm audit fix is working!
