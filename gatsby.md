@@ -18,11 +18,11 @@
    delete node_modules folder and reinstall by `npm install`  
  - do not use ```npm audit fix```
    
-# tailwind
+## tailwind
  - vscode tells you problems,
- ```unknown at rule @tailwind```
+ ```unknown at rule @tailwind```  
  create .vscode/css_custom_data.json and add these lines.
- ```
+ ```json
  {
   "atDirectives": [
     {
