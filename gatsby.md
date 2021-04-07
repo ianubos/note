@@ -18,3 +18,24 @@
    delete node_modules folder and reinstall by `npm install`  
  - do not use ```npm audit fix```
    
+# tailwind
+ - vscode tells you problems,
+ ```unknown at rule @tailwind```
+ create .vscode/css_custom_data.json and add these lines.
+ ```
+ {
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Use the @tailwind directive to insert Tailwind’s `base`, `components`, `utilities`, and `screens` styles into your CSS.",
+      "references": [
+        {
+          "name": "Tailwind’s “Functions & Directives” documentation",
+          "url": "https://tailwindcss.com/docs/functions-and-directives/#tailwind"
+        }
+      ]
+    }
+  ]
+}
+```
+ [stackoverflow](https://stackoverflow.com/questions/47607602/how-to-add-a-tailwind-css-rule-to-css-checker)
