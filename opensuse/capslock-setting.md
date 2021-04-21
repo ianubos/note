@@ -1,4 +1,4 @@
-### Convert Capslock to language !
+### Convert Capslock to language switch!
 1. [Look for the key switch](https://tldp.org/HOWTO/Intkeyb/x772.html)  
 2. [Make key swap file and add authority](https://ictsolved.github.io/remap-key-in-linux/)  
 3. Change keysetting at language property Kotoeri, so as to F12 working IME active/deactive key
