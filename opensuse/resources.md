@@ -7,7 +7,8 @@
 ### AMD cpu & gpu has no control over brightness of display...
 It is a kernel bug... just wait to be fixed...  
 update 2021-04-22  
-This will help you? -> [source](https://gitlab.freedesktop.org/drm/amd/-/issues/1438)
+This will help you? -> [source](https://gitlab.freedesktop.org/drm/amd/-/issues/1438)  
+Or this? -> [source](https://unix.stackexchange.com/questions/616371/backlight-control-not-working-on-lenovo-ideapad-gaming-3-with-renoir-amdgpu)
 
 [source](https://forum.garudalinux.org/t/failed-to-save-backlight-issue-on-boot/1401)  
 [backlight setting document](https://wiki.archlinux.org/index.php/backlight)
