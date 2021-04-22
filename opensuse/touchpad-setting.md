@@ -2,6 +2,16 @@
 [libinput](https://software.opensuse.org/package/libinput) Read this document well!!!   
 [good document](https://wiki.archlinux.org/index.php/Libinput#Touchpad_settings_not_taking_effect_in_KDE's_Touchpad_KCM)
 
+### See if you use proper setting
+[source](https://iberianpig.github.io/posts/2018-07-15_disable_while_typing/)
+```
+xinput
+xinput list-props [your touchpad number]
+```
+And also check where to locate file,  
+lower priority -> /usr/share/X11/xorg.conf.d/  
+higher priority -> /etc/X11/xorg.conf.d/  
+
 ### Create touchpad setting file
 [source](https://howchoo.com/linux/the-perfect-almost-touchpad-settings-on-linux-2)
 /usr/share/X11/xorg.conf.d/50-mtrack.conf
