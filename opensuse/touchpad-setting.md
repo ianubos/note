@@ -1,6 +1,7 @@
 ### Install libinput package
 [libinput](https://software.opensuse.org/package/libinput) Read this document well!!!   
 [good document](https://wiki.archlinux.org/index.php/Libinput#Touchpad_settings_not_taking_effect_in_KDE's_Touchpad_KCM)
+[options](https://man.archlinux.org/man/libinput.4#CONFIGURATION_DETAILS)
 
 ### See if you use proper setting
 [source](https://iberianpig.github.io/posts/2018-07-15_disable_while_typing/)
