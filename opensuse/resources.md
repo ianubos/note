@@ -8,3 +8,4 @@
 It is a kernel bug... just wait to be fixed...  
 [source](https://forum.garudalinux.org/t/failed-to-save-backlight-issue-on-boot/1401)  
 [backlight setting document](https://wiki.archlinux.org/index.php/backlight)
+[blacklist not worked](https://askubuntu.com/questions/286516/how-do-i-get-the-brightness-control-working-on-a-lenovo-yoga-13/304762#304762)
