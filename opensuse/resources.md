@@ -6,6 +6,9 @@
 
 ### AMD cpu & gpu has no control over brightness of display...
 It is a kernel bug... just wait to be fixed...  
+update 2021-04-22  
+This will help you? -> [source](https://gitlab.freedesktop.org/drm/amd/-/issues/1438)
+
 [source](https://forum.garudalinux.org/t/failed-to-save-backlight-issue-on-boot/1401)  
 [backlight setting document](https://wiki.archlinux.org/index.php/backlight)
 [blacklist not worked](https://askubuntu.com/questions/286516/how-do-i-get-the-brightness-control-working-on-a-lenovo-yoga-13/304762#304762)
