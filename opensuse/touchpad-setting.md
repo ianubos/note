@@ -1,5 +1,5 @@
 ### Install libinput package
-[libinput](https://software.opensuse.org/package/libinput)
+[libinput](https://software.opensuse.org/package/libinput) Read this document well!!!   
 [good document](https://wiki.archlinux.org/index.php/Libinput#Touchpad_settings_not_taking_effect_in_KDE's_Touchpad_KCM)
 
 ### Create touchpad setting file
@@ -40,5 +40,6 @@ Section "InputClass"
         Option          "ScrollLeftButton" "7"
         Option          "ScrollRightButton" "6"
         Option          "ScrollDistance" "350"
+        Option          "ClickMeMethod" "clickfinger"   //I added!
 EndSection
 ```
