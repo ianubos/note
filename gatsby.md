@@ -17,6 +17,7 @@
    [see this answer on stackoverflow](https://stackoverflow.com/questions/34600932/npm-eperm-operation-not-permitted-on-windows)  
    delete node_modules folder and reinstall by `npm install`  
  - do not use ```npm audit fix```
+ - [npm install dependency error](https://stackoverflow.com/questions/66612083/how-to-solve-dependency-error-in-gatsby-js) use ```--legacy-peer-deps ``` option
    
 ## tailwind
  - vscode tells you problems,
