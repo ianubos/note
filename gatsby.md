@@ -10,7 +10,7 @@
  - [cross-env](https://www.gatsbyjs.com/docs/using-graphql-playground/)
     how to use graphql
  - [plugin-sharp](https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp/?=sharp), [remark-images](https://www.gatsbyjs.com/plugins/gatsby-remark-images/?=remark-image), [remark-relative-images](https://www.gatsbyjs.com/plugins/gatsby-remark-relative-images/?=remark-relative)
-
+ - [gatsby-browser.js](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/)
 ## errors
  - error ```eperm operation not permitted```  
    please try to change folder -> property -> security -> full control
